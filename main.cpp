@@ -24,12 +24,9 @@ struct ArpTarget {
 };
 
 void usage() {
-    printf("syntax: send-arp <interface> <sender ip> <target ip> [<sender ip 2> <target ip 2> ...]\n");
+    printf("syntax: send-arp <interface> <sender ip> <target ip>\n");
     printf("sample: send-arp wlan0 192.168.10.2 192.168.10.1\n");
     printf("\nTo check infection status:\n");
-    printf("1. On victim machine: arp -a\n");
-    printf("2. On victim machine: ping -t 8.8.8.8\n");
-    printf("3. On attacker machine: run Wireshark to verify packets\n");
 }
 
 Mac getMacAddress(const char* dev) {
